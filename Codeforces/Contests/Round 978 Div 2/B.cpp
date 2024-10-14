@@ -17,37 +17,18 @@ int main(){
 	ll t;
 	cin >> t;
 	while(t--){
-		ll n;
-		cin >> n;
-		vl arr;
-		ll prev = 0;
-		set<ll> st;
+		ll n, x;
+		cin >> n >> x;
+		ll sum = 0;
+		ll maxx = 0;
 		ff(i, 0, n){
-			ll x;
-			cin >> x;
-			st.insert(x);
-			if(i == 0){
-				arr.pb(x);
-			}
-			else{
-				if(arr[prev] != x){
-					prev++;
-					arr.pb(x);
-				}
-			}
+			ll gg;
+			cin >> gg;
+			sum += gg;
+			maxx = max(maxx, gg);
 		}
-		vl count(n+1, 1);
-		n = arr.size();
-		count[arr[0]]--; count[arr[n-1]]--;
-		ff(i, 0, n){
-			count[arr[i]]++;
-		}
-		ll minn = LLONG_MAX;
-		ff(i, 0, n){
-			minn = min(minn, count[arr[i]]);
-		}
-		cout << minn << ed;
-		
+		cout << max(maxx, (sum+x-1)/x) << ed;
 	}
+	
 	return 0;
 }
