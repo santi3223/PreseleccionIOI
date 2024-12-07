@@ -3,11 +3,6 @@ using namespace std;
 #define ll long long
 #define vl vector<ll>
 #define vs vector<string>
-#include <bits/stdc++.h>
-using namespace std;
-#define ll long long
-#define vl vector<ll>
-#define vs vector<string>
 #define vb vector<bool>
 #define vc vector<char>
 #define ull unsigned long long
