@@ -23,7 +23,7 @@ int main(){
 	sort(all(arr));
 	ll cur = 0, c = 0;
 	ff(i, 0, n){
-		if(cur<arr[i]){
+		if(cur<=arr[i]){
 			c++;
 			cur += arr[i];
 		}
