@@ -27,21 +27,21 @@ int main(){
 	}
 	ll maxx = pref[n];
 	ff(x, 0, n){
-		cout << "XXX " << x << ed;
+		//cout << "XXX " << x << ed;
 		ll cur = arr[x]*arr[x];
 		for(ll l = x-1, r = x+1; l >= 0 && r < n; l--, r++){
 			cur += arr[l]*brr[r];
 			cur += arr[r]*brr[l];
 			maxx = max(maxx, cur+pref[l]+(pref[n]-pref[r+1]));
 		}
-		cout << "CENTER " << maxx << ed;
+		//cout << "CENTER " << maxx << ed;
 		cur = 0;
 		for(ll l = x, r = x+1; l >= 0 && r < n; l--, r++){
 			cur += arr[l]*brr[r];
 			cur += arr[r]*brr[l];
 			maxx = max(maxx, cur+pref[l]+(pref[n]-pref[r+1]));
 		}
-		cout << "NOT " << maxx << ed;
+		//cout << "NOT " << maxx << ed;
 	}
 	cout << maxx;
 }
