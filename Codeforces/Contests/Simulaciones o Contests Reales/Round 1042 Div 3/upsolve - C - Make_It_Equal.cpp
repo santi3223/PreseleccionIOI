@@ -12,7 +12,7 @@ int main(){
 		ll n, k;
 		cin >> n >> k;
 		vl arr(n);
-		unordered_map<ll, ll> count;
+		map<ll, ll> count;
 		ff(i, 0, n){
 			ll x;
 			cin >> x;
