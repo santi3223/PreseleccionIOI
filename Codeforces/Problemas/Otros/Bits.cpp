@@ -13,14 +13,14 @@ ll f(ll l, ll r){
 		return l;
 	}
 	ll num = log2(r);
-	if((1 << num) <= l){
-		return f(l-(1 << num), r-(1 << num))+ (1<<num);
+	if((1LL << num) <= l){
+		return f(l-(1LL << num), r-(1LL << num))+ (1LL<<num);
 	}
-	else if((1 << (num+1))-1 <= r){
-		return (1 << (num+1))-1;
+	else if((1LL << (num+1))-1 <= r){
+		return (1LL << (num+1))-1;
 	}
 	else{
-		return (1 << num)-1;
+		return (1LL << num)-1;
 	}
 }
 
